@@ -1,0 +1,1718 @@
+/*==========common code start here==========*/
+
+:root {
+    --primery-color: #040015;
+    --secondery-color: #F35045;
+    --third-color: #363636;
+    --transition: all 0.3s;
+    --primery_font-family: 'Libre Franklin';
+    --secondery_font-family: 'Open Sans';
+    --border-radius: 5px;
+    --transform: scale(1.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 1920px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.flex_spece_around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Libre Franklin;
+    font-size: 89px;
+    font-weight: 600;
+    line-height: 110px;
+
+}
+
+h2 {
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+
+}
+
+h3 {
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+
+}
+
+h4 {}
+
+h5 {
+
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+
+}
+
+h6 {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+
+}
+
+p {
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+
+}
+
+
+/*========common code end here=========*/
+
+/*=========Navbar Start here===========*/
+.hero_section {
+    background-image: url(../images/bg.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nav {
+    font-family: var(--primery_font-family);
+    font-size: 16px;
+    /* position: sticky;
+    top:0 ;
+    left: 0;
+    z-index: 999; */
+
+    border: 1px solid #d0cbcb;
+}
+
+.nav_logo {
+    width: 154px;
+    height: 35px;
+
+}
+
+.nav_list {
+    margin: 50px;
+    font-family: Libre Franklin;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.nav_link {
+    color: var(--primery-color);
+    transition: var(--transition);
+
+}
+
+.nav_link:hover {
+    color: var(--secondery-color);
+
+}
+
+/* .nav_link a:focus{
+    color: var(--secondery-color);
+
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+}
+
+.dropdown:hover .dropdown-content {
+    background-color: #F35045;
+    display: block;
+    width: 90px;
+    text-align: center;
+
+}
+
+.dropdown-content_li {
+    margin: 20px;
+
+}
+
+/*===========Navbar end here===========*/
+
+.main_section {
+    position: absolute;
+}
+
+.main_hadding {
+    position: relative;
+    font-family: Libre Franklin;
+    font-size: 79px;
+    line-height: 110px;
+    font-weight: 600;
+    color: var(--primery-color);
+    width: 936px;
+    top: 279px;
+    left: 252px;
+
+}
+
+.our_poducts_cercel {
+    width: 196px;
+    height: 195px;
+    background-color: var(--secondery-color);
+    position: absolute;
+    left: 1341px;
+    align-content: center;
+    border-radius: 50%;
+}
+
+.our_poducts_text {
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.our_poducts_cercel span {
+    position: absolute;
+    left: 15px;
+    width: 1px;
+    height: 10px;
+    background: #000000;
+    border-radius: 50px;
+    transform-origin: 80px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg/15)));
+    animation: animateBlink 1s linear infinite;
+    animation-delay: calc(var(--i) * (3s/15));
+
+}
+
+@keyframes animateBlink {
+    0% {
+        background: #2600ff;
+
+    }
+
+    25% {
+        background: #ff0000;
+    }
+}
+
+.main_section_text {
+    position: absolute;
+    font-family: Open Sans;
+    font-size: 21px;
+    line-height: 35px;
+    top: 710px;
+    left: 948px;
+    width: 720px;
+    height: 105px;
+    color: #363636;
+}
+
+.main_side_icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    background-color: var(--secondery-color);
+    width: 55px;
+    height: 174px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    top: 467px;
+}
+
+.main_side_icon a {
+    color: #FFFFFF;
+    transition: var(--transition);
+
+}
+
+.main_side_icon a:hover {
+    color: #FFFFFF;
+    transform: scale(1.5);
+
+}
+
+/********what we do section start here*************/
+.what_we_do_section {
+    background-color: #FFF8F1;
+    position: relative;
+    width: 1920px;
+    height: 538px;
+    margin-bottom: 136px;
+}
+
+.what_we_do_text {
+    position: absolute;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    color: #363636;
+    top: 141px;
+    left: 252px;
+
+
+}
+
+.what_we_do_left_text {
+    position: absolute;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+    width: 696px;
+    height: 186px;
+    top: 206px;
+    left: 252px;
+    border-top: 1px solid gray;
+}
+
+.what_we_do_ritht_text {
+    position: absolute;
+    width: 576px;
+    height: 175px;
+    top: 181px;
+    right: 202px;
+
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #363636;
+}
+
+/***********what we do section end here***********/
+
+/* ========product Section start here=========== */
+
+
+.prodects_container {
+    margin-top: 129px;
+}
+
+.prodect_section_hadding {
+    width: 879px;
+    height: 172px;
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+    margin: 0 auto 62px;
+    text-align: center;
+
+}
+
+.prodect_section_arino {
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    color: var(--primery-color);
+}
+
+.prodect_section_desc {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    color: #363636;
+
+}
+
+/* ========product Section end here=========== */
+
+
+
+/* ========banner Section start here=========== */
+.bannar_container {
+    position: relative;
+    width: 1416px;
+    height: 644px;
+    margin: 139px auto;
+}
+
+.banner_backgr_img {
+    border-radius: 20px;
+}
+
+.bannar_titel_text {
+    position: absolute;
+    top: 138px;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    line-height: 62px;
+    text-align: center;
+    color: var(--primery-color);
+}
+
+.bannar_icon {
+    position: absolute;
+    top: 385px;
+    display: flex;
+}
+
+.bannar_item {
+    margin: 15px;
+}
+
+/* ========banner Section end here=========== */
+
+/* ========steps sction start here=========== */
+
+.steps_container {
+    width: 1416px;
+    height: 307px;
+    margin: 137px auto;
+}
+
+.steps_card {
+    position: relative;
+    width: 456px;
+    height: 307px;
+
+}
+
+.steps_tittle {
+
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.step {
+    position: absolute;
+    width: 42px;
+    height: 20px;
+    margin: 0px 5px;
+    top: 30px;
+    left: -2px;
+    color: var(--primery-color);
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    background: #ffffff;
+
+}
+
+.steps_sub_tittle {
+    font-family: Libre Franklin;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: left;
+    margin: 53px auto 14px;
+
+}
+
+.steps_text {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color: gray;
+}
+
+/* ========steps sction end here=========== */
+/* ========cta & stat section start here=========== */
+
+.cta_stat_container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 2;
+    width: 1416px;
+    height: 639px;
+    margin: 0 auto;
+
+}
+
+.cta_stat_start_your {
+    position: relative;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #040015;
+    border-radius: 30px;
+    margin-right: 54px;
+}
+
+
+.cta_stat_tittle {
+    width: 504px;
+    font-family: Libre Franklin;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: left;
+    color: white;
+    margin: 196px 96px;
+}
+
+.cta_stat_your_img1 {
+    position: absolute;
+    width: 50.18px;
+    height: 47.23px;
+    top: 160px;
+    left: 65px;
+}
+
+.cta_stat_your_img2 {
+    position: absolute;
+    width: 353px;
+    height: 353px;
+    top: 389px;
+    left: 451px;
+}
+
+.cta_stat_text {
+    position: absolute;
+    width: 289px;
+    top: 360px;
+    left: 96px;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    color: #FFF8F1;
+}
+
+.cta_stat_btn {
+    position: absolute;
+    top: 480px;
+    left: 96px;
+    padding: 12px 25px 12px 25px;
+    border-radius: 10px;
+    background-color: var(--secondery-color);
+    outline-style: none;
+    color: #ffffff;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.cta_stat_btn:hover {
+
+    transform: scale(1.1);
+
+}
+
+.cta_stat h1 {
+    font-family: Libre Franklin;
+    font-size: 89px;
+    font-weight: 600;
+    line-height: 110px;
+    text-align: left;
+}
+
+.cta_stat h5 {
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    color: rgb(76, 75, 75);
+}
+
+.cta_stat p {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    color: grey;
+
+}
+
+/* ========cta & stat section end here=========== */
+/* ========Rectangle section start here =========== */
+
+.rectangle_container {
+    position: relative;
+    background-color: #FFF8F1;
+    display: flex;
+    margin-top: 150px;
+}
+
+.rectangle_left_section p {
+    position: absolute;
+    top: 141px;
+    left: 252px;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    color: #363636;
+
+}
+
+.rectangle_left_section h3 {
+    width: 696px;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+    border-top: 1px solid #363636;
+    margin: 206px 252px;
+
+}
+
+.rectangle_right_section {
+    margin-top: 149px;
+
+}
+
+.rectangle_right_item {
+    display: flex;
+    width: 576px;
+    height: 186px;
+    margin-bottom: 67px;
+}
+
+.rectangle_right_icon {
+    width: 96px;
+    height: 96px;
+    top: 4917px;
+    background-color: var(--secondery-color);
+    margin-bottom: 10px;
+    align-content: center;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 37px;
+}
+
+.fa-gear,
+.fa-sliders {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.rectangle_right_content h4 {
+    font-family: Libre Franklin;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 50px;
+
+}
+
+.rectangle_right_content h6 {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+
+}
+
+.rectangle_btn {
+    border-style: none;
+    height: 35px;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+    border-bottom: 1px solid var(--primery-color);
+    transition: var(--transition);
+}
+
+/* .rectangle_btn:hover {
+    transform: scale(1.1);
+
+} */
+
+.fa-play {
+    margin-left: 10px;
+}
+
+.rectangle_shape {
+    position: absolute;
+    top: 552px;
+    left: 0px;
+}
+
+/* ========Rectangle section end here =========== */
+
+/* ======== review_section start here =========== */
+
+.review_section {
+    width: 1416px;
+    margin: 137px auto;
+
+}
+
+.review_container {
+    background-color: var(--primery-color);
+    border-radius: 30px;
+}
+
+.review_section_headding {
+    width: 934px;
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 62px;
+
+}
+
+.review_all_card {
+    width: 1416px;
+    height: 610px;
+    border-radius: 30px 0px 0px 0px;
+    opacity: 0px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.review_card {
+    width: 365px;
+    height: 401px;
+    margin-top: 86px;
+
+}
+
+.review_card3 {
+    position: relative;
+    border-left: 1px solid lightblue;
+}
+
+.review_head_icon {
+    display: flex;
+    width: 360px;
+    height: 65px;
+    margin-bottom: 38px;
+
+}
+
+.review_head_img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+}
+
+.review_tittle h5 {
+    color: #ffffff;
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+
+}
+
+.review_tittle p {
+    font-size: 16px;
+    line-height: 25px;
+    color: lightgrey;
+    margin-top: 0px;
+    margin-bottom: 55px;
+}
+
+.review_card_text {
+    width: 365px;
+    height: 251px;
+    top: 6316px;
+    left: 348px;
+    color: #B6B6B6;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    margin-bottom: 58px;
+}
+
+.review_card_text_icon {
+    margin-bottom: 14px;
+}
+
+.average_rating {
+    color: #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+.rating {
+    color: white;
+    font-family: Libre Franklin;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    margin-top: -8px;
+
+}
+
+.review_star_icon {
+    color: orange;
+}
+
+.average_rating_star {
+    text-align: center;
+
+}
+
+.review_arrow01 {
+    width: 200px;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    top: 361px;
+    left: 133px;
+    border-top: 1px solid lightgray;
+    padding-top: 50px;
+
+}
+
+.fa-circle-arrow-left:hover {
+    cursor: pointer;
+    transition: var(--transition);
+    transform: scale(1.2);
+
+}
+
+.fa-circle-arrow-right:hover {
+    cursor: pointer;
+    transition: var(--transition);
+    transform: scale(1.2);
+
+}
+
+.fa-circle-arrow-left {
+    color: #B6B6B6;
+}
+
+/* ======== tech stack_section start here =========== */
+
+.tech_stack_section {
+    width: 1416px;
+    height: 1123px;
+    margin: 0 auto;
+    background-image: url(../images/Vector\ \(8\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.stack_section_head_icon {
+    position: relative;
+    top: 170px;
+    left: 680px;
+}
+
+.tech_stack_technologies h2 {
+    position: relative;
+    top: 211px;
+    left: 241px;
+    width: 934px;
+    height: 94px;
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: center;
+}
+
+.tech_stack_technologies h6 {
+    position: relative;
+    width: 835px;
+    height: 116px;
+    top: 216px;
+    left: 290px;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+}
+
+.tech_stack_item1 {
+    top: 266px;
+    display: flex;
+    position: relative;
+    left: 100px;
+}
+
+.tech_stack_item1 div {
+    margin: 24px;
+    background-color: #ffffff;
+    width: 160px;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+}
+
+.tech_stack_item2 {
+    left: 310px;
+}
+
+.tech_stack_down_text p {
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    color: var(--primery-color);
+    margin-top: 284px;
+}
+
+/* ========tech stack_section end here =========== */
+
+/* ========blog section start here =========== */
+section.blog_section {
+    margin: 150px auto;
+}
+
+.blog_section_container {
+    width: 1416px;
+    height: 942px;
+    margin: 0 auto;
+}
+
+.blog_up_section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 33px;
+}
+
+.blog_introduction {
+    width: 696px;
+    height: 285px;
+    flex: 2;
+
+}
+
+.blog_introduction p {
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+
+}
+
+.blog_introduction h2 {
+    width: 696px;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+    border-top: 3px solid #363636;
+    margin-top: 10px;
+}
+
+.blog_btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: var(--secondery-color);
+    border-style: none;
+    margin-top: 30px;
+    color: white;
+    transition: var(--transition);
+}
+
+.blog_btn:hover {
+    transform: scale(1.1);
+
+}
+
+.blog_card {
+    position: relative;
+    background-color: #F6F2F6;
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    margin-left: 33px;
+}
+
+.blog_card_back_sr {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 50%;
+    top: 45px;
+    left: 45px;
+
+}
+
+.blog_card h3 {
+    width: 17.7px;
+    height: 27.55px;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font-family: Libre Franklin;
+    font-size: 35px;
+    color: white;
+}
+
+.blog_card h4 {
+    position: absolute;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 30px;
+    top: 50px;
+    left: 120px;
+}
+
+.blog_card p {
+    position: absolute;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    top: 80px;
+    left: 120px;
+    color: grey;
+}
+
+.blog_card h6 {
+    position: absolute;
+    top: 242px;
+    left: 45px;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.blog_card h5 {
+    position: absolute;
+    top: 296px;
+    left: 45px;
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+
+}
+
+.blog_down_section {
+    display: flex;
+    flex: 3;
+}
+
+.card_vector_img {
+    position: absolute;
+    top: 115px;
+    right: 45px;
+}
+
+/* ========blog section end here =========== */
+
+/* ========Our prodects section start here =========== */
+.prodects_section {
+    width: 1920px;
+    margin: 0 auto;
+
+}
+
+.pridect_tittle_section h6 {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+}
+
+.pridect_tittle_section h2 {
+    font-family: Libre Franklin;
+    font-size: 67px;
+    font-weight: 600;
+    line-height: 80px;
+    text-align: center;
+
+}
+
+.card {
+    position: relative;
+    width: 1416px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    background-color: #FBF6FB;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+
+}
+
+.card span {
+    position: absolute;
+    width: 46px;
+    height: 30px;
+    top: 140px;
+    left: 277px;
+    background: rgb(243, 210, 210);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    color: red;
+
+}
+
+.card h3 {
+    position: absolute;
+    top: 158px;
+    left: 138px;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+}
+
+.card img {
+    position: absolute;
+    top: 190px;
+    left: 70px;
+}
+
+.card h6 {
+    position: absolute;
+    width: 600px;
+    top: 236px;
+    left: 70px;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+
+}
+
+.card a {
+    position: absolute;
+    top: 376px;
+    left: 70px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background-color: var(--secondery-color);
+    border-style: none;
+    color: white;
+    font-family: Libre Franklin;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card a:hover {
+    transform: scale(1.1);
+}
+
+.card_1 {
+    background-image: url(../images/img13.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_2 {
+    background-image: url(../images/img12.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_3 {
+    background-image: url(../images/img11.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_4 {
+    background-image: url(../images/img10.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_5 {
+    background-image: url(../images/img9.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_6 {
+    background-image: url(../images/img8.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.card_7 {
+    background-image: url(../images/img7.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 96%;
+    background-position-y: bottom;
+}
+
+.page_selector {
+
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color: white;
+}
+
+.fa-1 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 50px 5px;
+    background-color: #040015;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-2 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 50px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+
+/* ========Our prodects section end here =========== */
+
+/* =======products version section Start here ========= */
+
+
+/* Contact Section Steart Hear  */
+#contact_section {
+    background-color: #4c4c4c;
+    min-height: 90vh;
+}
+
+#contact_form {
+    box-shadow: 0.1rem 0.1rem 0.1rem #222, -0.1rem 0 0.1rem #222;
+    padding: 1rem;
+    margin: 1rem;
+    color: #fff;
+
+    /* display: flex;   {extra amar mone hoyche}
+    flex-direction: column; */
+}
+
+.form_control {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form_control label {
+    font-size: 1.6rem;
+    flex: 0.3;
+
+}
+
+input,
+textarea {
+    flex: 0.7;
+    width: 40rem;
+    font-size: 1.6rem;
+    padding: 2rem 1rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+textarea {
+    resize: none;
+    height: 22vh;
+}
+
+.from_btn_field {
+    /* display: flex;   {extra amar mone hoyche}*/
+    justify-content: end;
+}
+
+.contact_btn {
+    width: 30%;
+    transition: 0.3s;
+
+}
+
+.contact_btn:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+/* Contact Section End Hear  */
+
+/* =======products version section start here =========== */
+
+.product_tab_section {
+    width: 1217px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.product_tab_icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product_tab_icon button {
+    background-color: transparent;
+    padding: 0px 35px;
+    border-radius: 30px;
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.product_tab_icon i {
+    color: #000000;
+    margin: 9px;
+}
+
+.tab_icon.html_btn {
+    background: red;
+    border: none;
+    color: white;
+}
+
+.html_btn i {
+    color: #ffffff;
+}
+
+/* =======products version section end here ==== */
+
+/********products_version_text Start here*******/
+
+#products_version {
+    margin-top: 100px;
+}
+
+.products_version_text {
+    width: 1416px;
+    box-shadow: 1px 11px 14px #000000;
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-around;
+}
+
+.products_version_tittle h3 {
+    position: relative;
+    font-family: Libre Franklin;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 62px;
+    width: 600px;
+    height: 124px;
+    top: 70px;
+    left: 70px;
+}
+
+.products_version_tittle h6 {
+    position: relative;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    width: 600px;
+    top: 90px;
+    left: 70px;
+}
+
+.products_version_item1 {
+    display: flex;
+    position: relative;
+    top: 120px;
+    font-family: Open Sans;
+    font-size: 16px;
+}
+
+.products_version_item1 div {
+    width: 172px;
+    height: 37px;
+    margin-left: 64px;
+    padding: 5px;
+}
+
+i.fa-solid.fa-check {
+    color: red;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.products_version_btn button {
+    position: relative;
+    width: 190px;
+    height: 59px;
+    border-radius: 10px;
+    top: 145px;
+    left: 70px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.products_version_btn button:hover {
+    transform: scale(1.1);
+}
+
+.products_version_btn_right {
+    background: #040015;
+    color: white;
+    font-family: Libre Franklin;
+    font-size: 21px;
+}
+
+.products_version_btn_left {
+    font-family: Libre Franklin;
+    font-size: 21px;
+}
+
+.fa-arrow-right {
+    margin: 10px;
+}
+
+.products_version_img {
+    width: 526px;
+    height: 530px;
+}
+
+.products_version_tbn_end {
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+
+.products_end_button {
+    padding: 10px 30px;
+    background: #F350451A;
+    width: 224px;
+    height: 59px;
+    border-radius: 30px;
+    font-size: 21px;
+    margin: 100px auto 200px;
+    border-style: none;
+    transition: 0.3s;
+}
+
+.products_end_button:hover {
+    transform: scale(1.2);
+}
+
+/* =======about_section section Start here======== */
+.about_container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.about_hero_section {
+    width: 1920px;
+    height: 774px;
+    background-color: #FAF8FA;
+    margin-bottom: 142px;
+}
+
+.about_hero_title {
+    position: relative;
+    width: 983px;
+    height: 240px;
+    top: 236px;
+    left: 527px;
+    z-index: 999;
+}
+
+.about_hero_shape1_img {
+    position: relative;
+    top: -70px;
+    left: 319px;
+}
+
+.blank_about_hero_section {
+   
+    background-color: #9c1b1b;
+    width: 889px;
+    height: 622px;
+    border-radius: 30px 0px 0px 0px;
+}
+
+img.about_hero_shape2_img {
+    position: relative;
+    top: 148px;
+    left: 844px;
+}
+
+.about_hero_under_section {
+    width: 1920px;
+    height: 306px;
+    border-bottom: 1px solid #b3b0b0;
+}
+
+h5.about_hero_section_text {
+    width: 804px;
+    height: 166px;
+    margin: 0 auto;
+}
+
+/* =======about_section section end here======== */
+
+/* =====customize_services section start here==== */
+.customize_services_about_container {
+    width: 1416px;
+    height: 1107px;
+    margin: 87px auto 134px;
+}
+
+.about_customize_services_tittle {
+    display: flex;
+}
+
+
+
+/* =====customize_services section end
+ here==== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============Footer Section start hera============*/
+
+.footer_upper_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+}
+
+.footer_blank {
+    width: 480px;
+}
+
+.footer_upper_center {
+    width: 720px;
+    background-color: var(--secondery-color);
+    height: 80px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.footer_upper_right {
+    width: 720px;
+    background-color: #040015;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.footer_center_section {
+    height: 647px;
+    background-color: #040015;
+    display: flex;
+}
+
+.footer_img {
+    width: 480px;
+    position: relative;
+}
+
+.footer_images {
+    position: absolute;
+    top: 150px;
+    left: 169px;
+}
+
+.footer_text {
+    width: 1440px;
+    color: white;
+    border-left: 1px solid #444141;
+}
+
+.footer_all_text {
+    display: flex;
+    justify-content: space-around;
+    margin: 140px 70px;
+    margin-top: 140px;
+}
+
+.footer_icon {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #444141;
+    padding: 20px;
+    align-items: center;
+}
+
+.fa-facebook,
+.fa-x-twitter,
+.fa-linkedin {
+    margin-right: 10px;
+}
+
+.footer_link a {
+    color: white;
+    margin-left: 41px;
+}
+
+.footer_common_cod {
+    font-family: Libre Franklin;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+}
+
+.footer_link {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+}
+
+.footer_icon_icon {
+    width: 154px;
+    height: 21px;
+    color: #FFF5ED;
+}
+
+/* Footer Section end hera*/
